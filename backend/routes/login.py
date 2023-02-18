@@ -43,6 +43,8 @@ def login():
     username = request.json.get("username", None)
     password = request.json.get("password", None)
 
+    print(username, password)
+
     if not username:
         return (
             jsonify(message="Please provide your username!", type="USERNAME_MISSING"),

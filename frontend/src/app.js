@@ -19,6 +19,7 @@ import {
   LabelValues,
   Data,
   Annotate,
+  LoadData,
 } from "./pages";
 import NavBar from "./containers/navbar";
 
@@ -135,6 +136,11 @@ class App extends React.Component {
               exact
               path="/labels/:id/values"
               component={LabelValues}
+            />
+            <PrivateRoute
+              exact
+              path="/upload"
+              component={LoadData}
             />
             <Route exact path="*">
               <Error message="Page not found!" />

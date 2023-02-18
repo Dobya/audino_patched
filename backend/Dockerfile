@@ -11,4 +11,6 @@ COPY ./requirements.txt /app/backend
 RUN pip3 install --upgrade setuptools
 RUN pip3 install -r requirements.txt
 
+ENV PYCHARM_DEBUG=1
+
 COPY . /app/backend
